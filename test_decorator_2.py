@@ -22,3 +22,8 @@ if __name__ == '__main__':
     # decorator_one装饰过了，真正执行的是经过装饰的函数
     raw_func()
 
+    # 本来我们想要打印的是函数 raw_func 的名字
+    # 事实却并不是如此，我们打印的是装饰器中的函数名，如果我们不像让这个函数的名字和注释文档
+    # 被篡改，请见 test_decorator_3.py
+    print raw_func.__name__
+
