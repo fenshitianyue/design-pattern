@@ -6,6 +6,8 @@ from functools import wraps
 # 装饰器
 def decorator_one(func):
     # 包装你想"修饰的函数"的函数
+    # @warps接受一个函数来进行修饰并加入了复制函数名称、注释文档、参数列表等功能
+    # 这让我们在装饰器里面可以访问装饰之前的函数的属性
     @wraps(func)
     def wrap_the_func():
         print 'do some work before func()'
